@@ -1,3 +1,13 @@
+
+#############################################################################
+
+#CREATE FOLLOWING FOLDER
+#C:\dhrumil\Personal\Learning\CourseEra\Data Science\Course 4 - EDA\Project 1\exdata_data_household_power_consumption
+#Place Input File here
+#Output is generated here
+
+#############################################################################
+
 library(mlbench)
 
 #load data from the source file
@@ -22,7 +32,7 @@ DataSetOfInterest$GlobalActivePower <- round(as.numeric(as.character(DataSetOfIn
 DataSetOfInterest$DateTime <- format(as.POSIXct(paste(DataSetOfInterest$Date2, DataSetOfInterest$Time, sep = " ")), "%d/%m/%Y %H:%M")
 
 
-png(file = "Plot2.png", bg = "white", width = 480, height = 480)
+png(file = "C:\\Dhrumil\\Personal\\Learning\\CourseEra\\Data Science\\Course 4 - EDA\\Project 1\\exdata_data_household_power_consumption\\Plot2.png", bg = "white", width = 480, height = 480)
 with(DataSetOfInterest,
   {
     plot(DataSetOfInterest$GlobalActivePower~as.POSIXct(DataSetOfInterest$DateTime,format="%d/%m/%Y %H:%M", origin="01/02/2007 00:00"), type="l", xlab = "DateTime",

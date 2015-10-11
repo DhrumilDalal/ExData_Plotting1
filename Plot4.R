@@ -1,3 +1,13 @@
+
+#############################################################################
+
+#CREATE FOLLOWING FOLDER
+#C:\dhrumil\Personal\Learning\CourseEra\Data Science\Course 4 - EDA\Project 1\exdata_data_household_power_consumption
+#Place Input File here
+#Output is generated here
+
+#############################################################################
+
 library(mlbench)
 
 #load data from the source file
@@ -23,7 +33,7 @@ DataSetOfInterest$DateTime <- format(as.POSIXct(paste(DataSetOfInterest$Date2, D
 at = format(as.POSIXct(DataSetOfInterest$DateTime), '%d')
 DataSetOfInterest$day_1 = at
 
-png(file = "Plot4.png", bg = "white", width = 480, height = 480)
+png(file = "C:\\Dhrumil\\Personal\\Learning\\CourseEra\\Data Science\\Course 4 - EDA\\Project 1\\exdata_data_household_power_consumption\\Plot4.png", bg = "white", width = 480, height = 480)
 
 
 

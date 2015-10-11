@@ -1,3 +1,13 @@
+
+#############################################################################
+
+#CREATE FOLLOWING FOLDER
+#C:\dhrumil\Personal\Learning\CourseEra\Data Science\Course 4 - EDA\Project 1\exdata_data_household_power_consumption
+#Place Input File here
+#Output is generated here
+
+#############################################################################
+
 library(mlbench)
 
 #load data from the source file
@@ -21,7 +31,7 @@ DataSetOfInterest$SubMetering3 <- round(as.numeric(as.character(DataSetOfInteres
 
 DataSetOfInterest$DateTime <- format(as.POSIXct(paste(DataSetOfInterest$Date2, DataSetOfInterest$Time, sep = " ")), "%d/%m/%Y %H:%M") 
 
-png(file = "Plot3.png", bg = "white", width = 480, height = 480)
+png(file = "C:\\Dhrumil\\Personal\\Learning\\CourseEra\\Data Science\\Course 4 - EDA\\Project 1\\exdata_data_household_power_consumption\\Plot3.png", bg = "white", width = 480, height = 480)
 
 plot(as.POSIXct(DataSetOfInterest$DateTime,format="%d/%m/%Y %H:%M"), xlab = "DateTime",
      xlim=as.POSIXct(c("01/02/2007 00:00:00","02/02/2007 23:59:00"), format="%d/%m/%Y %H:%M:%S"),
